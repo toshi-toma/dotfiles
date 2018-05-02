@@ -1,0 +1,15 @@
+[user]
+	name = 10shi10ma
+	email = 10shi10ma@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+[alias]
+	st = status
+	br = branch
+	co = commit -m
+	ch = checkout
+	pu = push
+	pl = pull
