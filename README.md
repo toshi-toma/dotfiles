@@ -7,4 +7,5 @@ Dotfiles.
 を設定すると、どの画面上でもショートカットキー(option + Space)でフルスクリーン表示ができるようになる。
 
 # .gitconfig
+https://github.com/10shi10ma/dotfiles/blob/master/.gitconfig
 gitの設定ファイル
