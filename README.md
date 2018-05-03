@@ -14,7 +14,7 @@ cd dotfiles
 を設定すると、どの画面上でもショートカットキー(option + Space)でフルスクリーン表示ができるようになる。
 
 # .gitconfig/.gitignore
-TBD
+[.gitignore](https://github.com/10shi10ma/dotfiles/blob/master/.gitignore) 
 [.gitconfig](https://github.com/10shi10ma/dotfiles/blob/master/.gitconfig)  
 gitの設定ファイル
 
