@@ -19,7 +19,8 @@ cd dotfiles
 「font」はFamilyは「Ricty Diminished」を選択して、TypeFaceは「Bold」でSizeは「14」。
 
 ## Colors
-Color Presetsは「Pastel(Dark Background)」を指定。
+[colorschemes](http://iterm2colorschemes.com/)からcolor schemeをダウンロードして  
+Color Presetsは「Cobalt2」を指定。
 
 ## 日本語表記ゆれを防ぐ
 「Profiles」→「Text」→「Treat ambiguous-width characters as double-width」にチェック
