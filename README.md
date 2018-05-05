@@ -21,6 +21,9 @@ cd dotfiles
 ## Colors
 Color Presetsは「Pastel(Dark Background)」を指定。
 
+## 日本語表記ゆれを防ぐ
+「Profiles」→「Text」→「Treat ambiguous-width characters as double-width」にチェック
+
 # .gitconfig/.gitignore
 [.gitignore](https://github.com/10shi10ma/dotfiles/blob/master/.gitignore) 
 [.gitconfig](https://github.com/10shi10ma/dotfiles/blob/master/.gitconfig)  
