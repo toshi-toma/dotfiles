@@ -14,7 +14,7 @@ cd dotfiles
 を設定すると、どの画面上でもショートカットキー(option + Space)でフルスクリーン表示ができるようになる。
 
 ## font
-[Ricty Diminished](http://www.rs.tus.ac.jp/yyusa/ricty_diminished.html)  
+[Ricty Diminished](http://www.rs.tus.ac.jp/yyusa/ricty_diminished.html)    
 からダウンロード。
 「font」はFamilyは「Ricty Diminished」を選択して、TypeFaceは「Bold」でSizeは「14」
 
