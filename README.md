@@ -15,6 +15,7 @@ cd dotfiles
 
 ## font
 [Ricty Diminished](http://www.rs.tus.ac.jp/yyusa/ricty_diminished.html)  
+からダウンロード。
 「font」はFamilyは「Ricty Diminished」を選択して、TypeFaceは「Bold」でSizeは「14」
 
 # .gitconfig/.gitignore
