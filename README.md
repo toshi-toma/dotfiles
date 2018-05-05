@@ -16,7 +16,10 @@ cd dotfiles
 ## font
 [Ricty Diminished](http://www.rs.tus.ac.jp/yyusa/ricty_diminished.html)    
 からダウンロード。
-「font」はFamilyは「Ricty Diminished」を選択して、TypeFaceは「Bold」でSizeは「14」
+「font」はFamilyは「Ricty Diminished」を選択して、TypeFaceは「Bold」でSizeは「14」。
+
+## Colors
+Color Presetsは「Pastel(Dark Background)」を指定。
 
 # .gitconfig/.gitignore
 [.gitignore](https://github.com/10shi10ma/dotfiles/blob/master/.gitignore) 
