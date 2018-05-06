@@ -13,6 +13,7 @@ SAVEHIST=1000000
 
 # gitの情報を取得
 autoload -Uz vcs_info
+setopt PROMPT_SUBST
 zstyle ':vcs_info:git:*' check-for-changes true #formats 設定項目で %c,%u が使用可
 zstyle ':vcs_info:git:*' stagedstr "%F{green}!" #commit されていないファイルがある
 zstyle ':vcs_info:git:*' unstagedstr "%F{magenta}+" #add されていないファイルがある
@@ -21,8 +22,8 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]' #rebase 途中,merge コンフリ�
 precmd () { vcs_info }
 
 # プロンプト左
-PROMPT='%{${fg[green]}%}[%n]%{${reset_color}%} %~
-%{$fg[red]%} ➜  %{$reset_color%}'
+PROMPT="%{${fg[green]}%}[%n]%{${reset_color}%} %~
+%{$fg[red]%} ➜  %{$reset_color%}"
 # プロンプト右
 RPROMPT='${vcs_info_msg_0_} %{${fg[red]}%}%}%b%{${reset_color}%}'
 
