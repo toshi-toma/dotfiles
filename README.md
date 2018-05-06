@@ -33,8 +33,9 @@ Color Presetsは「Cobalt2」を指定。
 [.gitconfig](https://github.com/10shi10ma/dotfiles/blob/master/.gitconfig)  
 gitの設定ファイル
 
-# .zshrc/.zshenv
-TBD
+# .zshrc
+[.zshrc](https://github.com/10shi10ma/dotfiles/blob/master/.zshrc)  
+zshの設定ファイル
 
 # .vimrc
 TBD
