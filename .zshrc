@@ -11,12 +11,23 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+# git
+autoload -Uz vcs_info
+zstyle ':vcs_info:git:*' check-for-changes true #formats 設定項目で %c,%u が使用可
+zstyle ':vcs_info:git:*' stagedstr "%F{green}!" #commit されていないファイルがある
+zstyle ':vcs_info:git:*' unstagedstr "%F{magenta}+" #add されていないファイルがある
+zstyle ':vcs_info:*' formats "%F{cyan}%c%u(%b)%f" #通常
+zstyle ':vcs_info:*' actionformats '[%b|%a]' #rebase 途中,merge コンフリクト等 formats 外の表示
+
+precmd () { vcs_info }
+
 # プロンプト
 # 1行表示
 # PROMPT="%~ %# "
 # 2行表示
-PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
-➜  "
+PROMPT="%{${fg[green]}%}[%n]%{${reset_color}%} %~
+%{$fg[red]%} ➜  %{$reset_color%}"
+RPROMPT="${vcs_info_msg_0_} %{${fg[red]}%}%}%b%{${reset_color}%}"
 
 # 補完
 # 補完機能を有効にする
@@ -47,4 +58,8 @@ setopt auto_list
 
 # 標準エディタを設定する
 export EDITOR=vim
+
+# 補間
+autoload -U compinit
+compinit
 
