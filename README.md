@@ -37,5 +37,14 @@ gitの設定ファイル
 [.zshrc](https://github.com/10shi10ma/dotfiles/blob/master/.zshrc)  
 zshの設定ファイル
 
+# peco
+[pecoのインストール](https://qiita.com/tmsanrinsha/items/72cebab6cd448704e366)
+
+```
+$ brew install peco
+```
+[.zshrc](https://github.com/10shi10ma/dotfiles/blob/master/.zshrc)
+
+
 # .vimrc
 TBD
