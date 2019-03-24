@@ -7,6 +7,8 @@ cd $THIS_DIR
 
 echo "\033[0;32mstart setup... \033[0;39m"
 
+echo "setup symbolic link..."
+
 # dotfileのシンボリックリンク作成
 for f in .??*
 do
@@ -15,4 +17,16 @@ do
     ln -snfv ~/dotfiles/"$f" ~/
 done
 
-echo "\033[0;32mFinish!!! \033[0;39m"
+echo "finish"
+
+source ~/.zshrc
+
+echo "setup nodebrew and node"
+if !(type "nodebrew" > /dev/null 2>&1); then
+    curl -L git.io/nodebrew | perl - setup
+    nodebrew install-binary stable
+    nodebrew use stable
+fi
+echo "finish"
+
+echo "\033[0;32mAll Finish!!! \033[0;39m"
