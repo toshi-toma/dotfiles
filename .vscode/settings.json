@@ -1,0 +1,20 @@
+// create a symlink to "${HOME}/Library/Application Support/Code/User/settings.json"
+{
+  "telemetry.enableCrashReporter": false,
+  "editor.renderWhitespace": true,
+  "editor.detectIndentation": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.fontFamily": "Ricty Diminished",
+  "editor.fontSize":20,
+  "workbench.iconTheme": "material-icon-theme",
+  "extensions.ignoreRecommendations": false,
+  "explorer.confirmDelete": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  // npmコマンドをサイドパネルに表示
+  "npm.enableScriptExplorer": true,
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.minimap.enabled": false,
+  "window.zoomLevel": 1,
+  "terminal.integrated.shell.osx": "/bin/zsh"
+}

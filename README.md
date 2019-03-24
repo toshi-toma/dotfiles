@@ -4,13 +4,15 @@ Dotfiles.
 ```bash
 $ git clone https://github.com/toshi-toma/dotfiles.git
 $ cd dotfiles
+$ chmod +x brew.sh
+$ ./brew.sh
 $ chmod +x install.sh
-$ chmod +x homebrew_install.sh
-$ ./homebrew_install.sh
 $ ./install.sh
+$ chmod +x vscode.sh
+$ ./vscode.sh
 ```
 
-# bash app(iTerm2)
+# iTerm2
 ## Native full screen windows
 [iTerm2のおすすめ設定〜ターミナル作業を効率化する〜](https://qiita.com/ruwatana/items/8d9c174250061721ad11)  
 を設定すると、どの画面上でもショートカットキー(option + Space)でフルスクリーン表示ができるようになる。
@@ -47,6 +49,26 @@ $ brew install peco
 ```
 [.zshrc](https://github.com/10shi10ma/dotfiles/blob/master/.zshrc)
 
-
 # .vimrc
 TBD
+
+# Mac App
+[toshi-toma/mac-apps](https://github.com/toshi-toma/mac-apps/blob/master/README.md)
+
+# VSCode
+## Shell Command
+1. Visual Studio Codeを起動
+2. コマンドパレットを開く(cmd+shift+p)
+3. "Shell Command: Install 'code' command in PATH"を選択
+
+## Install extensions
+
+```
+cat .vscode/extensions.txt | xargs -n 1 code --install-extension
+```
+
+## Save extensions
+
+```
+code --list-extensions > .vscode/extensions.txt
+```
