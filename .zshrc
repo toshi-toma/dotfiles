@@ -127,3 +127,15 @@ bindkey '^R' peco-select-history
 
 # cd後、自動的にls
 function chpwd() { ls }
+
+function get_target_repo() {
+  if [ $# -eq 1 ]; then
+    echo $1
+  else
+    echo $(repos)
+  fi
+}
+
+function coderepo() {
+  open -a Visual\ Studio\ Code $(get_target_repo $1)
+}

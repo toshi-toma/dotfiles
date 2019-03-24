@@ -11,8 +11,9 @@ alias lsp='ls -l | peco'
 # vim
 alias vi='vim'
 # ghq + peco
-alias repo='cd $(ghq list -p | peco)'
-
+alias repos='ghq list -p | peco'
+alias repo='cd $(repos)'
+alias github='hub browse'
 #diff
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'

@@ -17,6 +17,8 @@
 [core]
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
+[ghq]
+  root = ~/dev
 [alias]
 	st = status
 	br = branch
