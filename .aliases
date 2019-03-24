@@ -1,0 +1,21 @@
+
+#---------------------------------------------------------------------------
+# Alias
+#---------------------------------------------------------------------------
+alias g="git"
+alias ls="ls -G"
+alias ll='ls -ltr'
+alias la="ls -lhAF --color=auto"
+# ls
+alias lsp='ls -l | peco'
+# vim
+alias vi='vim'
+# ghq + peco
+alias repo='cd $(ghq list -p | peco)'
+
+#diff
+if [[ -x `which colordiff` ]]; then
+  alias diff='colordiff -u'
+else
+  alias diff='diff -u'
+fi

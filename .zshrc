@@ -31,6 +31,9 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # ファイルリスト補完時、ディレクトリをシアン
 zstyle ':completion:*' list-colors 'di=36;49'
 
+# alias
+source $HOME/.aliases
+
 #---------------------------------------------------------------------------
 # History
 #---------------------------------------------------------------------------
@@ -124,23 +127,3 @@ bindkey '^R' peco-select-history
 
 # cd後、自動的にls
 function chpwd() { ls }
-
-#---------------------------------------------------------------------------
-# Alias
-#---------------------------------------------------------------------------
-alias ls="ls -G"
-alias ll='ls -ltr'
-alias la="ls -lhAF --color=auto"
-# ls
-alias lsp='ls -l | peco'
-# vim
-alias vi='vim'
-# ghq + peco
-alias repo='cd $(ghq list -p | peco)'
-
-#diff
-if [[ -x `which colordiff` ]]; then
-  alias diff='colordiff -u'
-else
-  alias diff='diff -u'
-fi
