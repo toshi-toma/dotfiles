@@ -5,11 +5,11 @@ Dotfiles.
 $ git clone https://github.com/toshi-toma/dotfiles.git
 $ cd dotfiles
 $ chmod +x brew.sh
-$ ./brew.sh
+$ sh brew.sh
 $ chmod +x install.sh
-$ ./install.sh
+$ sh install.sh
 $ chmod +x vscode.sh
-$ ./vscode.sh
+$ sh vscode.sh
 ```
 
 # iTerm2
