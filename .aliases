@@ -1,22 +1,42 @@
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
 
-#---------------------------------------------------------------------------
-# Alias
-#---------------------------------------------------------------------------
+# Shortcuts
 alias g="git"
+alias vi='vim'
+
+# ls
 alias ls="ls -G"
 alias ll='ls -ltr'
 alias la="ls -lhAF --color=auto"
-# ls
 alias lsp='ls -l | peco'
-# vim
-alias vi='vim'
+
 # ghq + peco
 alias repos='ghq list -p | peco'
 alias repo='cd $(repos)'
 alias github='hub browse'
+
 #diff
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
 else
   alias diff='diff -u'
 fi
+
+# Always enable colored `grep` output
+alias grep='grep --color=auto'
+
+# Google Chrome
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
+
+# Show Finder
+alias show="open ."
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
