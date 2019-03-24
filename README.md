@@ -32,26 +32,6 @@ Color Presetsは「Cobalt2」を指定。
 ## Shell(zsh)
 「General」→「Command」→「/bin/zsh」を指定。
 
-# .gitconfig/.gitignore
-[.gitignore](https://github.com/10shi10ma/dotfiles/blob/master/.gitignore) 
-[.gitconfig](https://github.com/10shi10ma/dotfiles/blob/master/.gitconfig)  
-gitの設定ファイル
-
-# .zshrc
-[.zshrc](https://github.com/10shi10ma/dotfiles/blob/master/.zshrc)  
-zshの設定ファイル
-
-# peco
-[pecoのインストール](https://qiita.com/tmsanrinsha/items/72cebab6cd448704e366)
-
-```
-$ brew install peco
-```
-[.zshrc](https://github.com/10shi10ma/dotfiles/blob/master/.zshrc)
-
-# .vimrc
-TBD
-
 # Mac App
 [toshi-toma/mac-apps](https://github.com/toshi-toma/mac-apps/blob/master/README.md)
 
