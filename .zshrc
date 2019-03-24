@@ -70,6 +70,8 @@ RPROMPT='${vcs_info_msg_0_} %{${fg[red]}%}%}%b%{${reset_color}%}'
 # Complement
 #---------------------------------------------------------------------------
 
+# zsh-completions
+fpath=(/path/to/homebrew/share/zsh-completions $fpath)
 # 補完機能を有効にする
 autoload -Uz compinit
 compinit
@@ -136,3 +138,9 @@ alias vi='vim'
 # ghq + peco
 alias repo='cd $(ghq list -p | peco)'
 
+#diff
+if [[ -x `which colordiff` ]]; then
+  alias diff='colordiff -u'
+else
+  alias diff='diff -u'
+fi
