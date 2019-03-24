@@ -128,6 +128,7 @@ bindkey '^R' peco-select-history
 # cd後、自動的にls
 function chpwd() { ls }
 
+# ghqのリポジトリからVSCodeを起動
 function get_target_repo() {
   if [ $# -eq 1 ]; then
     echo $1
@@ -135,7 +136,15 @@ function get_target_repo() {
     echo $(repos)
   fi
 }
-
 function coderepo() {
   open -a Visual\ Studio\ Code $(get_target_repo $1)
+}
+
+# git repoのルートに移動
+cdgit () {
+    git rev-parse --is-inside-work-tree > /dev/null
+    if [ $? = 0 ];
+    then
+        cd `git rev-parse --show-toplevel`
+    fi
 }
