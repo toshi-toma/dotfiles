@@ -1,6 +1,9 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
-export PATH="/bin:/usr/bin:/usr/local/bin:/Users/toshihisa/.homebrew/bin:${PATH}"
+export PATH="/bin:/usr/bin:/usr/local/bin:/Users/toshihisa/.homebrew/bin:$HOME/.nodebrew/current/bin:${PATH}"
+
+# Node
+export NODEBREW_ROOT=$HOME/.nodebrew
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -88,3 +91,4 @@ alias lsp='ls -l | peco'
 
 # vim
 alias vi='vim'
+

@@ -1,11 +1,13 @@
 # dotfiles
 Dotfiles.
 
-TBD
 ```bash
-git clone https://github.com/10shi10ma/dotfiles
-cd dotfiles
-./install.sh
+$ git clone https://github.com/toshi-toma/dotfiles.git
+$ cd dotfiles
+$ chmod +x install.sh
+$ chmod +x homebrew_install.sh
+$ ./homebrew_install.sh
+$ ./install.sh
 ```
 
 # bash app(iTerm2)
