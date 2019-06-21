@@ -25,6 +25,7 @@ formulas=(
     zsh
     zsh-completions
     peco
+    fzf
     ghq
     tmux
     hub

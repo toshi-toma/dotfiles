@@ -9,6 +9,15 @@ export PATH="/bin:/usr/bin:/usr/local/bin:/Users/toshihisa/.homebrew/bin:$HOME/.
 # Node
 export NODEBREW_ROOT=$HOME/.nodebrew
 
+# Go
+export GOPATH=$HOME/go
+export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
+
+# fzf
+export FZF_DEFAULT_OPTS='--height 40% --reverse --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229 --color info:150,prompt:110,spinner:150,pointer:167,marker:174'
+
+# Hyper
+
 # ビープ音を鳴らさないようにする
 setopt no_beep
 
@@ -30,6 +39,9 @@ export EDITOR=vim
 export LSCOLORS=gxfxcxdxbxegedabagacad
 # ファイルリスト補完時、ディレクトリをシアン
 zstyle ':completion:*' list-colors 'di=36;49'
+
+# binding
+bindkey -e
 
 # alias
 source $HOME/.aliases
@@ -113,17 +125,17 @@ setopt auto_cd
 #---------------------------------------------------------------------------
 
 # コマンド履歴
-function peco-select-history() {
+function fzf-select-history() {
     # historyを番号なし、逆順、最初から表示。
     # 順番を保持して重複を削除。
-    # カーソルの左側の文字列をクエリにしてpecoを起動
+    # カーソルの左側の文字列をクエリにしてfzfを起動
     # \nを改行に変換
-    BUFFER="$(history -nr 1 | awk '!a[$0]++' | peco --query "$LBUFFER" | sed 's/\\n/\n/')"
+    BUFFER="$(history -nr 1 | awk '!a[$0]++' | fzf --query "$LBUFFER" | sed 's/\\n/\n/')"
     CURSOR=$#BUFFER             # カーソルを文末に移動
     zle -R -c                   # refresh
 }
-zle -N peco-select-history
-bindkey '^R' peco-select-history
+zle -N fzf-select-history
+bindkey '^R' fzf-select-history
 
 # cd後、自動的にls
 function chpwd() { ls }
@@ -148,3 +160,12 @@ cdgit () {
         cd `git rev-parse --show-toplevel`
     fi
 }
+
+# git branch checkout
+gch() {
+  local branches branch
+  branches=$(git branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+

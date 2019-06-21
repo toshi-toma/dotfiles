@@ -14,10 +14,10 @@ alias vi='vim'
 alias ls="ls -G"
 alias ll='ls -ltr'
 alias la="ls -lhAF --color=auto"
-alias lsp='ls -l | peco'
+alias lsf='ls -l | fzf'
 
-# ghq + peco
-alias repos='ghq list -p | peco'
+# ghq + fzf
+alias repos='ghq list -p | fzf'
 alias repo='cd $(repos)'
 alias github='hub browse'
 
