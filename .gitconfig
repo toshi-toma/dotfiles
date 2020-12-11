@@ -17,6 +17,7 @@
 [core]
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
+	autocrlf = false
 [ghq]
   root = ~/dev
 [alias]
@@ -34,9 +35,14 @@
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
+	# Show verbose output about tags, branches or remotestags = tag -l
 	branches = branch -a
 	remotes = remote -v
 	# List aliases
 	aliases = config --get-regexp alias
+[url "https://"]
+	insteadOf = git://
+[pager]
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less

@@ -11,8 +11,8 @@ alias g="git"
 alias vi='vim'
 
 # ls
-alias ls="ls -G"
-alias ll='ls -ltr'
+alias ls="exa -G"
+alias ll='exa -ltr'
 alias la="ls -lhAF --color=auto"
 alias lsf='ls -l | fzf'
 
