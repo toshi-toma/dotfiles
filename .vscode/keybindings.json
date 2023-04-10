@@ -3,7 +3,12 @@
   {
     "key": "ctrl+cmd+h",
     "command": "deleteWordLeft",
-    "when": "textInputFocus && !editorReadonly"
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+cmd+d",
+    "command": "deleteWordRight",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
   },
   {
     "key": "alt+backspace",
@@ -103,11 +108,11 @@
   {
     "key": "ctrl+n",
     "command": "cursorDown",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
+    "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetVisible"
   },
   {
     "key": "ctrl+d",
-    "command": "-extension.vim_ctrl+d",
+    "command": "deleteRight",
     "when": "editorTextFocus && vim.active && !inDebugRepl"
   }
 ]

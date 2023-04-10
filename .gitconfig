@@ -16,10 +16,14 @@
 	untracked = cyan
 [core]
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
 	autocrlf = false
+	excludesFile = /Users/toshi-toma/.config/git/ignore
 [ghq]
   root = ~/dev
+[pager]
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
 [alias]
 	st = status
 	br = branch

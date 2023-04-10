@@ -40,3 +40,10 @@ alias show="open ."
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# git
+alias gpush='git push origin HEAD'
+
+# redis
+alias redis='redis-server /usr/local/etc/redis.conf'
+

@@ -14,7 +14,7 @@
   // npmコマンドをサイドパネルに表示
   "npm.enableScriptExplorer": true,
   "editor.minimap.enabled": false,
-  "window.zoomLevel": 0,
+  "editor.guides.bracketPairs": true,
   "terminal.integrated.shell.osx": "/bin/zsh",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -81,7 +81,7 @@
   "terminal.integrated.fontSize": 15,
   "workbench.colorTheme": "Monokai",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true 
+    "source.fixAll.eslint": true
   },
   "todo-tree.tree.showScanModeButton": false,
   "vim.hlsearch": true,
@@ -101,5 +101,29 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.cursorStyle": "line",
+  "editor.lineNumbers": "on",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "search.exclude": {
+    "**/dist": true
+  },
+  "debug.javascript.autoAttachFilter": "smart",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false
   }
 }

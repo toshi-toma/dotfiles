@@ -2,13 +2,25 @@
 # General
 #---------------------------------------------------------------------------
 
+zmodload zsh/datetime
+start_time=$(strftime '%s%.')
+
 # 環境変数
 export LANG=ja_JP.UTF-8
-export PATH="/bin:/usr/bin:/usr/local/bin:/Users/toshihisa/.homebrew/bin:$HOME/.nodebrew/current/bin:${PATH}"
+export PATH="/bin:/usr/bin:/usr/local/bin:/Users/toshihisa/.homebrew/bin:${PATH}"
+
+# set PATH so it includes user's private bin if it exists
+PATH="$HOME/.local/bin:$PATH"
 
 # Node
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
+
+# Ruby
+eval "$(rbenv init - zsh)"
+
+# direnv
+eval "$(direnv hook zsh)"
 
 # Go
 export GOPATH=$HOME/go
@@ -254,3 +266,8 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+
+end_time=$(strftime '%s%.')
+echo $((end_time - start_time))
+
