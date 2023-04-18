@@ -16,6 +16,9 @@ PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
 # Ruby
 eval "$(rbenv init - zsh)"
 
