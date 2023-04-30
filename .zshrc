@@ -12,6 +12,9 @@ export PATH="/bin:/usr/bin:/usr/local/bin:/Users/toshihisa/.homebrew/bin:${PATH}
 # set PATH so it includes user's private bin if it exists
 PATH="$HOME/.local/bin:$PATH"
 
+# diff-highlight
+export PATH="$PATH:/usr/local/share/git-core/contrib/diff-highlight"
+
 # Node
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
@@ -274,3 +277,5 @@ fi
 end_time=$(strftime '%s%.')
 echo $((end_time - start_time))
 
+export RBENV_ROOT="$HOME/.rbenv"
+export PATH="$RBENV_ROOT/bin:$PATH"
